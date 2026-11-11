@@ -7,7 +7,7 @@ This file is for the teammate who will run the experiments. Do not commit datase
 Use Python 3.11 or 3.12.
 
 ```powershell
-git clone https://github.com/OWNER/deepfake-radar.git
+git clone https://github.com/angelraised/deepfake-radar.git
 cd deepfake-radar
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
