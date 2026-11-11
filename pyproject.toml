@@ -1,0 +1,7 @@
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "ml/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+
