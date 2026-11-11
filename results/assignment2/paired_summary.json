@@ -1,0 +1,11 @@
+{
+  "corrected_by_enrichment": 331,
+  "new_errors_after_enrichment": 195,
+  "unchanged_correctness": 474,
+  "paired_bootstrap_accuracy_delta_95_ci_pp": [
+    9.9,
+    17.3
+  ],
+  "bootstrap_resamples": 3000,
+  "seed": 42
+}

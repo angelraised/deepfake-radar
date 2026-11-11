@@ -1,0 +1,25 @@
+{
+  "total_images": 91897,
+  "class_distribution": {
+    "real": 46500,
+    "ai_generated": 45397
+  },
+  "split_distribution": {
+    "train": 77092,
+    "val": 14805
+  },
+  "source_distribution": {
+    "CIFAKE": 83897,
+    "Tiny-GenImage": 8000
+  },
+  "dimensions": {
+    "width_min": 32,
+    "width_median": 32,
+    "width_max": 384,
+    "height_min": 32,
+    "height_median": 32,
+    "height_max": 384
+  },
+  "exact_duplicate_files": 0,
+  "unrecorded_provenance": 0
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "TheKernel01/Tiny-GenImage",
+  "revision": "89c4fe9efd0ebc7ce5c7641ef57d578ccd639c69",
+  "baseline_train": 69092,
+  "enriched_train": 77092,
+  "unchanged_validation": 14805,
+  "fixed_cifake_test": 19962,
+  "tiny_train_counts": {
+    "Wukong": 1000,
+    "BigGAN": 1000,
+    "ADM": 1000,
+    "Real": 4000,
+    "GLIDE": 1000
+  },
+  "ood_counts": {
+    "Real": 500,
+    "Midjourney": 500
+  },
+  "seed": 42,
+  "epoch_budget": 5,
+  "batch_size": 64,
+  "optimizer": "AdamW",
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "sampling": "seeded streaming shuffle, buffer 128, class and generator quotas",
+  "normalization": "Added and OOD images use identical RGB JPEG encoding, longest side <=384. CIFAKE source files retain their original encoding.",
+  "limitation": "Tiny-GenImage train and validation share the benchmark but have different official splits. Exact raw and standardized byte hashes were checked. Perceptual duplicates are outside this audit. Training sample count and optimizer steps increase together."
+}

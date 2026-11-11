@@ -1,0 +1,25 @@
+{
+  "total_images": 98702,
+  "class_distribution": {
+    "real": 50000,
+    "ai_generated": 48702
+  },
+  "split_distribution": {
+    "train": 69092,
+    "val": 14805,
+    "test": 14805
+  },
+  "source_distribution": {
+    "unrecorded": 98702
+  },
+  "dimensions": {
+    "width_min": 32,
+    "width_median": 32.0,
+    "width_max": 32,
+    "height_min": 32,
+    "height_median": 32.0,
+    "height_max": 32
+  },
+  "exact_duplicate_files": 0,
+  "unrecorded_provenance": 98702
+}

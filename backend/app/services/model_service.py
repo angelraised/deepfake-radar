@@ -10,11 +10,11 @@ from PIL import Image
 try:
     import torch
     from torchvision.models import efficientnet_b0
-    from torchvision.transforms import v2
+    from ml.training.data import transforms
 except (ImportError, OSError):  # Research API remains inspectable before ML dependencies are installed.
     torch = None
     efficientnet_b0 = None
-    v2 = None
+    transforms = None
 
 from backend.app.config import CHECKPOINT_DIR
 
@@ -59,20 +59,14 @@ def model_status(model_id: str) -> dict:
 
 
 def predict(image_bytes: bytes, model_id: str) -> dict:
-    if torch is None or v2 is None:
+    if torch is None or transforms is None:
         raise RuntimeError("PyTorch and torchvision are required for inference.")
     path = MODEL_FILES[model_id]
     if not path.is_file():
         raise FileNotFoundError(f"Checkpoint for '{model_id}' has not been trained yet.")
     model, metadata = load_model(model_id, path.stat().st_mtime_ns)
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    transform = v2.Compose([
-        v2.Resize((224, 224)),
-        v2.ToImage(),
-        v2.ToDtype(torch.float32, scale=True),
-        v2.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
-    ])
-    tensor = transform(image).unsqueeze(0)
+    tensor = transforms(training=False)(image).unsqueeze(0)
     started = time.perf_counter()
     with torch.inference_mode():
         probabilities = torch.softmax(model(tensor), dim=1)[0]
