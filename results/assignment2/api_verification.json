@@ -1,0 +1,30 @@
+{
+  "status": 200,
+  "demo": "demo_example.jpg",
+  "response": {
+    "baseline": {
+      "prediction": "AI_GENERATED",
+      "confidence": 0.9999988079071045,
+      "probabilities": {
+        "real": 1.146055865319795e-06,
+        "ai_generated": 0.9999988079071045
+      },
+      "model": "efficientnet_b0_baseline",
+      "version": "original-seed42",
+      "inference_time_ms": 228.62657599944214,
+      "warning": "This prediction is probabilistic and is not proof of image authenticity."
+    },
+    "improved": {
+      "prediction": "REAL",
+      "confidence": 0.9999908208847046,
+      "probabilities": {
+        "real": 0.9999908208847046,
+        "ai_generated": 9.148639037448447e-06
+      },
+      "model": "efficientnet_b0_improved",
+      "version": "improved-seed42",
+      "inference_time_ms": 204.4182659992657,
+      "warning": "This prediction is probabilistic and is not proof of image authenticity."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "source_commit": "0cc9a6dc22401b1998e42af1c5988ad65d2a99a1",
+  "mode": "baseline",
+  "gpu": "Tesla T4",
+  "dataset": "CIFAKE",
+  "exact_test_duplicates_excluded": 378
+}

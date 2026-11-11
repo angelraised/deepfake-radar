@@ -1,0 +1,17 @@
+{
+  "prepared_path": "test/real/tiny_a98cf4518134adcff20f.jpg",
+  "split": "test",
+  "label": "real",
+  "source": "Tiny-GenImage",
+  "generator": "Real",
+  "sha256": "b98806fd3277e05e3de1098495832743da834396f26254d523e64a6aec322192",
+  "original_sha256": "a98cf4518134adcff20ffcb598e61865451f69cc9e7c70d37c7ad1e7a62cb9d1",
+  "group_id": "a98cf4518134adcff20ffcb598e61865451f69cc9e7c70d37c7ad1e7a62cb9d1",
+  "original_url": "https://huggingface.co/datasets/TheKernel01/Tiny-GenImage",
+  "revision": "89c4fe9efd0ebc7ce5c7641ef57d578ccd639c69",
+  "license": "CC BY-NC-SA 4.0 (dataset card)",
+  "source_split": "validation",
+  "original_path": "ILSVRC2012_val_00040008.JPEG",
+  "baseline_p_ai": 0.9999988079071045,
+  "enriched_p_ai": 9.148656317847781e-06
+}
